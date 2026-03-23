@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWCXKwUvt_o4sq-nYtN5SEgxCrhmSiFLeusCVkwSqVw&s&ec=121585071">
+  <title>Skills | Anik</title>
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      background: #f5f3ef;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page-header {
+      padding: 48px 48px 32px;
+      border-bottom: 1px solid #e8e4dc;
+    }
+
+    .page-header .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+
+    .page-header h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(28px, 4vw, 44px);
+      color: #1a1a1a;
+    }
+
+    @media(max-width:768px) {
+      .page-header {
+        padding: 32px 20px 20px;
+      }
+
+      .page-content {
+        padding: 28px 20px 60px !important;
+      }
+    }
+
+    .skills-cols {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .skills-cols .card {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .soft-list {
+      list-style: none;
+    }
+
+    .soft-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0ece4;
+      font-size: 14px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .soft-list li:last-child {
+      border-bottom: none;
+    }
+
+    .soft-list li::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #333;
+      flex-shrink: 0;
+    }
+
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="top-nav">
+    <a href="index.html" class="nav-left">
+      <div class="initials-circle">A</div>
+      <div class="nav-name-block">
+        <h1>Anik</h1>
+      </div>
+    </a>
+    <ul class="nav-center">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="https://github.com/meJ1NX" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" width="18"
+          height="18" fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
+        </svg></a>
+      <a href="https://www.linkedin.com/in/md-anik-hassan-27754b3a2/" target="_blank" aria-label="LinkedIn"><svg
+          viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg></a>
+      <a href="https://www.facebook.com/md.anik.hassan.373673" target="_blank" aria-label="Facebook"><svg
+          viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path
+            d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
+        </svg></a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-social">
+      <a href="https://github.com/meJ1NX" target="_blank"><svg viewBox="0 0 24 24" width="18" height="18"
+          fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
+        </svg></a>
+      <a href="https://www.linkedin.com/in/md-anik-hassan-27754b3a2/" target="_blank"><svg viewBox="0 0 24 24"
+          width="18" height="18" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg></a>
+      <a href="https://www.facebook.com/md.anik.hassan.373673" target="_blank"><svg viewBox="0 0 24 24" width="18"
+          height="18" fill="currentColor">
+          <path
+            d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
+        </svg></a>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="section-label">What I can do</div>
+    <h2>Skills</h2>
+  </div>
+  <div class="page-content" style="max-width:960px;margin:0 auto;padding:48px 48px 80px;">
+    <div class="section-label">Technical</div>
+    <h3 style="font-size:22px;margin-bottom:24px;">Engineering &amp; Programming</h3>
+    <div class="skills-cols">
+      <div class="card">
+        <h3>🔧 Engineering Skills</h3>
+        <div class="skill-item">
+          <div class="skill-label"><span>MATLAB / Simulink</span><span>85%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Analog Communication</span><span>80%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Signal Processing</span><span>78%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="78"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Circuit Design</span><span>75%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Embedded Systems / Arduino</span><span>70%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="70"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Digital Electronics</span><span>72%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="72"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>💻 Programming Skills</h3>
+        <div class="skill-item">
+          <div class="skill-label"><span>HTML5 / CSS3</span><span>75%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>C / C++</span><span>70%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="70"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>JavaScript</span><span>60%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="60"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Python</span><span>65%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="65"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Data Structures (DSA)</span><span>65%</span></div>
+          <div class="skill-track">
+            <div class="skill-fill" data-width="65"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="skills-cols">
+      <div class="card">
+        <h3>🤝 Soft Skills</h3>
+        <ul class="soft-list">
+          <li>Problem Solving</li>
+          <li>Teamwork &amp; Collaboration</li>
+          <li>Attention to Detail</li>
+          <li>Time Management</li>
+          <li>Communication</li>
+          <li>Adaptability &amp; Self-learning</li>
+          <li>Creative Thinking</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🛠️ Tools &amp; Technologies</h3>
+        <div class="tools-grid">
+          <span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">Proteus</span>
+          <span class="tag">Arduino IDE</span><span class="tag">VS Code</span><span class="tag">Git &amp; GitHub</span>
+          <span class="tag">Function Generator</span><span class="tag">LaTeX</span><span class="tag">Microsoft
+            Office</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made by <span>Md. Anik Hassan</span> &copy; 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
