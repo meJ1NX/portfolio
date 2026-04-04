@@ -1,0 +1,597 @@
+/* ============================================================
+   style.css — Shared styles for all pages
+   Theme: Clean, minimal, warm off-white, serif headings
+   Fonts: Playfair Display (headings) + Lato (body)
+============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ---- Reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---- Base ---- */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f5f3ef;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+p {
+  color: #555;
+  font-size: 15px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* ============================================================
+   NAVIGATION
+   Layout: [Logo Left] [Links Center] [Social Icons Right]
+============================================================ */
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 48px;
+  background-color: #f5f3ef;
+  border-bottom: 1px solid #e8e4dc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ---- LEFT: Logo (initials circle + name) ---- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  flex: 1;                  /* takes up 1 part of space */
+}
+
+.initials-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.nav-name-block h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+}
+
+.nav-name-block p {
+  font-size: 12px;
+  color: #888;
+  margin: 2px 0 0;
+}
+
+/* ---- CENTER: Page links ---- */
+.nav-center {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  flex: 2;                  /* takes up 2 parts — pushes it to the center */
+  justify-content: center;  /* centers the links inside */
+}
+
+.nav-center a {
+  font-size: 14px;
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  transition: color 0.2s;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+  color: #111;
+  border-bottom-color: #111;
+}
+
+/* ---- RIGHT: Social icons ---- */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;                  /* takes up 1 part — mirrors the left side */
+  justify-content: flex-end; /* pushes icons to the right */
+}
+
+.nav-social a {
+  color: #555;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.nav-social a:hover {
+  color: #111;
+}
+
+/* SVG icons size */
+.nav-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* ---- Hamburger (mobile only) ---- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* ---- Mobile menu ---- */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #f5f3ef;
+  border-bottom: 1px solid #e0dbd0;
+  padding: 10px 48px 20px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: #444;
+  padding: 11px 0;
+  border-bottom: 1px solid #e8e4dc;
+  font-size: 15px;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu a:hover {
+  color: #111;
+}
+
+/* Social icons row inside mobile menu */
+.mobile-social {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0 4px;
+}
+
+.mobile-social a {
+  border-bottom: none !important;
+  padding: 0 !important;
+  color: #555;
+}
+
+.mobile-social svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ============================================================
+   PAGE HEADER (used on all inner pages)
+============================================================ */
+
+.page-header {
+  padding: 56px 48px 40px;
+  border-bottom: 1px solid #e8e4dc;
+  background-color: #f5f3ef;
+}
+
+.page-header .section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.page-header h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  color: #1a1a1a;
+}
+
+/* ============================================================
+   MAIN CONTENT WRAPPER
+============================================================ */
+
+.page-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 48px 80px;
+}
+
+/* ============================================================
+   SECTION LABEL (small uppercase label above headings)
+============================================================ */
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ============================================================
+   DIVIDER LINE
+============================================================ */
+
+.divider {
+  border: none;
+  border-top: 1px solid #e8e4dc;
+  margin: 40px 0;
+}
+
+/* ============================================================
+   CARDS
+============================================================ */
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e8e4dc;
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+
+.btn {
+  display: inline-block;
+  padding: 10px 28px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.btn-dark:hover {
+  background-color: #111;
+  border-color: #111;
+}
+
+/* ============================================================
+   SKILL PROGRESS BARS
+============================================================ */
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.skill-label span:last-child {
+  color: #999;
+  font-weight: 400;
+}
+
+.skill-track {
+  background-color: #e8e4dc;
+  border-radius: 2px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  width: 0;
+  transition: width 1s ease;
+}
+
+/* ============================================================
+   TABLE
+============================================================ */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+  border-bottom: 2px solid #e8e4dc;
+  font-weight: 700;
+}
+
+table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0ece4;
+  color: #555;
+  vertical-align: top;
+}
+
+table td:first-child {
+  color: #222;
+  font-weight: 600;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover td {
+  background-color: #faf9f6;
+}
+
+/* ============================================================
+   FORM
+============================================================ */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: border 0.25s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #333;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Error state */
+.form-group.error input,
+.form-group.error textarea {
+  border-color: #c0392b;
+}
+
+.error-msg {
+  display: none;
+  color: #c0392b;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.form-group.error .error-msg {
+  display: block;
+}
+
+/* Success box */
+#successMsg {
+  display: none;
+  background-color: #f0faf4;
+  border: 1px solid #a8d5b5;
+  color: #2d6a4f;
+  padding: 14px 18px;
+  border-radius: 3px;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+/* ============================================================
+   TAGS / BADGES
+============================================================ */
+
+.tag {
+  display: inline-block;
+  padding: 3px 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #555;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.tag-dark {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-green {
+  background-color: #eaf4ee;
+  color: #2d6a4f;
+}
+
+.badge-blue {
+  background-color: #eaf0fa;
+  color: #2c4a8a;
+}
+
+.badge-yellow {
+  background-color: #fdf6e3;
+  color: #7a5c00;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #e8e4dc;
+  background-color: #f5f3ef;
+  font-family: 'Lato', sans-serif;
+}
+
+footer span {
+  color: #555;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 768px) {
+  .top-nav {
+    padding: 16px 20px;
+  }
+
+  .nav-center,
+  .nav-social {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    padding: 10px 20px 16px;
+  }
+
+  .page-header {
+    padding: 40px 20px 28px;
+  }
+
+  .page-content {
+    padding: 36px 20px 60px;
+  }
+
+  table th, table td {
+    padding: 10px 10px;
+  }
+
+  /* Stack table on small screens */
+  .table-stack thead {
+    display: none;
+  }
+
+  .table-stack tr {
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid #e8e4dc;
+    border-radius: 4px;
+    padding: 12px;
+  }
+
+  .table-stack td {
+    display: block;
+    border-bottom: none;
+    padding: 4px 0;
+  }
+
+  .table-stack td::before {
+    content: attr(data-label);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999;
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 700;
+  }
+}
